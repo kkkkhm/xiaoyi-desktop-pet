@@ -1,0 +1,27 @@
+{
+  "name": "xiaoyi-desktop-pet",
+  "version": "1.0.0",
+  "description": "小怡 desktop pet",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack:win": "electron-builder --win dir --x64 --config.win.signAndEditExecutable=false",
+    "pack:mac": "electron-builder --mac pkg"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "build": {
+    "appId": "com.xiaoyi.desktoppet",
+    "productName": "小怡桌宠",
+    "asar": true,
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "signAndEditExecutable": false
+    }
+  }
+}

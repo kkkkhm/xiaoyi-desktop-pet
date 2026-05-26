@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小怡桌宠</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="stage" aria-label="小怡桌宠">
+      <button id="close" title="关闭">x</button>
+      <button id="history-toggle" class="history-toggle" type="button" title="聊天记录">...</button>
+      <button id="action-toggle" class="action-toggle" type="button" title="动作选择">♪</button>
+      <button id="settings-toggle" class="settings-toggle" type="button" title="设置">⚙</button>
+
+      <section id="action-panel" class="action-panel" aria-label="动作选择">
+        <button type="button" data-action="idle_breathe">弹唱</button>
+        <button type="button" data-action="idle_blink">工作</button>
+        <button type="button" data-action="idle_sleep">睡觉</button>
+        <button type="button" data-action="idle_wakeup">醒来</button>
+        <button type="button" data-action="walk_left">左走</button>
+        <button type="button" data-action="walk_right">右走</button>
+        <button type="button" data-action="click_surprise">飞吻</button>
+        <button type="button" data-action="drag_struggle">挣扎</button>
+        <button type="button" data-action="happy_wave">拥抱</button>
+      </section>
+
+      <section id="settings-panel" class="settings-panel" aria-label="设置">
+        <label class="setting-row">
+          <span>开机自启动</span>
+          <input id="open-at-login" type="checkbox" />
+        </label>
+        <label class="setting-row">
+          <span>启动后自动打招呼</span>
+          <input id="auto-greeting" type="checkbox" />
+        </label>
+        <label class="setting-row">
+          <span>始终显示在最上层</span>
+          <input id="always-on-top" type="checkbox" />
+        </label>
+        <div class="setting-divider"></div>
+        <label class="setting-field">
+          <span>聊天模型</span>
+          <select id="chat-provider">
+            <option value="openai">OpenAI</option>
+            <option value="deepseek">DeepSeek 官方</option>
+            <option value="deepseekLocal">DeepSeek 本地免费</option>
+            <option value="ollama">Ollama 本地</option>
+            <option value="custom">自定义兼容接口</option>
+          </select>
+        </label>
+        <label class="setting-field">
+          <span>Base URL</span>
+          <input id="chat-base-url" type="text" spellcheck="false" />
+        </label>
+        <label class="setting-field">
+          <span>模型名</span>
+          <input id="chat-model" type="text" spellcheck="false" />
+        </label>
+        <label class="setting-field">
+          <span>API Key</span>
+          <input id="chat-api-key" type="password" spellcheck="false" placeholder="本地模型可不填" />
+        </label>
+        <button id="save-chat-model" class="settings-save" type="button">保存聊天模型</button>
+      </section>
+
+      <section id="history-panel" class="history-panel" aria-label="聊天记录">
+        <button id="clear-memory" class="clear-memory" type="button" title="清除聊天记录">清除记录</button>
+        <div id="messages" class="messages"></div>
+      </section>
+
+      <p id="reply-bubble" class="reply-bubble">点我互动</p>
+      <div id="pet" class="pet" role="img" aria-label="小怡"></div>
+
+      <form id="chat-form" class="chat-form">
+        <input id="chat-input" type="text" autocomplete="off" maxlength="180" placeholder="和小怡说话" />
+        <button type="submit" title="发送">></button>
+      </form>
+    </main>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
