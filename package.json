@@ -23,5 +23,9 @@
     "win": {
       "signAndEditExecutable": false
     }
+  },
+  "devDependencies": {
+    "electron": "^37.4.0",
+    "electron-builder": "^26.0.12"
   }
 }
