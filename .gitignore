@@ -10,6 +10,11 @@ release/
 *.rar
 *.exe
 
+# Keep the ready-to-run download bundle in the repository.
+!windows-portable/
+!windows-portable/**
+!windows-portable/*.exe
+
 # Local runtime data
 *.log
 npm-debug.log*

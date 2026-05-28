@@ -1,0 +1,24 @@
+小怡桌宠 Windows 便携版
+
+使用方法：
+1. 双击运行 xiaoyi-desktop-pet-v1.0.0-win-portable.exe
+2. 小怡知识库.txt 必须和 exe 放在同一个文件夹
+3. 修改小怡知识库.txt 后，重启桌宠生效
+
+知识库可以填写：
+- 用户昵称和希望被如何称呼
+- 桌宠昵称
+- 回复风格偏好
+- 用户长期偏好
+- 桌宠需要知道的长期背景
+
+聊天设置：
+- 双击桌宠打开聊天框
+- 在设置里选择 OpenAI、DeepSeek、Ollama 或自定义模型
+- API Key 会保存在本机设置文件中
+
+本地聊天记忆位置：
+%APPDATA%\小怡桌宠\xiaoyi-memory.json
+
+本地设置位置：
+%APPDATA%\小怡桌宠\xiaoyi-settings.json
